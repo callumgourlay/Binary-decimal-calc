@@ -1,6 +1,7 @@
 """
 calculator Project
 """
+import random
 
 int1 = 0
 int2 = 0
@@ -27,6 +28,9 @@ bin15 = 0
 bin16 = 0
 bin17 = 0
 bin18 = 0
+diceSize = 0
+rollAmount = 0
+
 while True:
     print('select a module,')
     print('c = calculator')
@@ -63,9 +67,15 @@ while True:
         print("                         ")
 
     if module == "d":
-        print("                         ")
-        print("                         ")
-        print("                         ")
+        print("Enter the size of dice you want to roll")
+        diceSize = int(input())
+        print("How many times do you want to roll")
+        rollAmount = int(input())
+        while rollAmount >= 1:
+            print(random.randint(1, diceSize))
+            rollAmount = rollAmount -1
+
+
         print("                         ")
         print("                         ")
 
